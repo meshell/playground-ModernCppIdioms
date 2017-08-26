@@ -1,12 +1,12 @@
 #include "Exercises/Universe.h"
 
 #include <string>
-#include <vector>
 #include <iostream>
 #include <sstream>
-#include <fstream>
+#include "helpers/helpers.h"
 
 using namespace std;
+using namespace modern_cpp::helpers;
 
 void Message(string channel, string msg) {
     stringstream ss(msg);
@@ -18,20 +18,6 @@ void Message(string channel, string msg) {
 
 void Success(bool success) {
     cout << "TECHIO> success " << (success ? "true" : "false") << endl;
-}
-
-// check if a string exists in a text file
-bool ExistsInFile(string str, string filename) {
-    ifstream file(filename);
-    string line;
-
-    while (getline(file, line)) {
-        if (line.find(str) != string::npos ) {
-            return true;
-        }
-    }
-    
-    return false;
 }
 
 void AssertEquals(int expected, int found, string message) {
@@ -51,7 +37,7 @@ int main() {
         AssertEquals(6, Universe::CountAllStars(galaxy2), "Running Universe::CountAllStars(9, -3)...");
         Success(true);
 
-        if (ExistsInFile("accumulate", "src/Exercises/Universe.cpp")) {
+        if (exists_in_file("accumulate", "src/Exercises/Universe.cpp")) {
             Message("My personal Yoda, you are. 🙏", "* ● ¸ .　¸. :° ☾ ° 　¸. ● ¸ .　　¸.　:. • ");
             Message("My personal Yoda, you are. 🙏", "           　★ °  ☆ ¸. ¸ 　★　 :.　 .   ");
             Message("My personal Yoda, you are. 🙏", "__.-._     ° . .　　　　.　☾ ° 　. *   ¸ .");
