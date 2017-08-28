@@ -10,6 +10,9 @@ set_property(TARGET stdc++fs PROPERTY IMPORTED_LOCATION "/usr/lib/gcc/x86_64-lin
 add_executable(structured_binding src/helpers/helpers.cpp src/Exercises/structured_binding.cpp)
 target_link_libraries(structured_binding stdc++fs)
 
+add_executable(check_structured_bindings src/check_structured_bindings.cpp src/helpers/helpers.cpp)
+target_link_libraries(check_structured_bindings stdc++fs)
+
 add_executable(init_statements src/helpers/helpers.cpp src/Exercises/init_statements.cpp)
 target_link_libraries(init_statements stdc++fs)
 

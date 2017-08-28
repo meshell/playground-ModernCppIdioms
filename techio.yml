@@ -4,8 +4,8 @@ title : C++ template
 plan:
   - title: Welcome # Set the page title
     statement: markdowns/welcome.md # Set the file path to the page content
-#  - title: Another Page
-#    statement: markdowns/another-page.md
+  - title: Structured Bindings
+    statement: markdowns/structured_bindings.md
 
 
 # Settings for your programming projects and the associated Docker images

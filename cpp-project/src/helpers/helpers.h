@@ -9,7 +9,10 @@ namespace helpers {
 
 namespace fs = std::experimental::filesystem;
 
-bool exists_in_file(const std::string& str, const fs::path& filepath);
+unsigned exists_in_file(const std::string& pattern, const fs::path& filepath);
+void show_message_on_techio(std::string_view channel, std::string_view msg);
+void show_success(bool success);
+
 
 }
 }
