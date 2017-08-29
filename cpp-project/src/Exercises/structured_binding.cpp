@@ -17,15 +17,19 @@ int main() {
 
     const auto hans = "Hans Meister"s;
     const auto hans_address = address_t{"Maihofstrasse 49"s, 6000u, "Luzern"s};
-    auto result = address_book.insert({hans, hans_address});
 
-    std::cout << "inserted = " << result.second << std::endl;
-    std::cout << "name = " << result.first->first << std::endl;
-    std::cout << "address = " << result.first->second.street << ", "
-              << result.first->second.plz << ", "
-              << result.first->second.city << std::endl;
+    auto it = address_book.begin();
+    auto inserted = false;
 
-    auto it = address_book.find(hans);
+    std::tie(it, inserted)  = address_book.insert({hans, hans_address});
+
+    std::cout << "inserted = " << inserted << std::endl;
+    std::cout << "name = " << it->first << std::endl;
+    std::cout << "address = " << it->second.street << ", "
+              << it->second.plz << ", "
+              << it->second.city << std::endl;
+
+    it = address_book.find(hans);
     if (it != address_book.end()) {
         std::cout << hans << " is in address book\n";
     }
@@ -61,7 +65,3 @@ int main() {
                   << entry.second.city << std::endl;
     }
 }
-
-
-
-

@@ -17,13 +17,14 @@ int main() {
 
     const auto hans = "Hans Meister"s;
     const auto hans_address = address_t{"Maihofstrasse 49"s, 6000u, "Luzern"s};
-    const auto [elem, inserted] = address_book.insert({hans, hans_address});
+    const auto [it, inserted] = address_book.insert({hans, hans_address});
+    const auto [name, address] = *it;
 
     std::cout << "inserted = " << inserted << std::endl;
-    std::cout << "name = " << elem->first << std::endl;
-    std::cout << "address = " << elem->second.street << ", "
-              << elem->second.plz << ", "
-              << elem->second.city << std::endl;
+    std::cout << "name = " << name << std::endl;
+    std::cout << "address = " << address.street << ", "
+              << address.plz << ", "
+              << address.city << std::endl;
 
     auto it = address_book.find(hans);
     if (it != address_book.end()) {
@@ -61,7 +62,3 @@ int main() {
                   << address.city << std::endl;
     }
 }
-
-
-
-
