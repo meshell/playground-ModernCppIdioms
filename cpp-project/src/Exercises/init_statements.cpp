@@ -17,8 +17,8 @@ int main() {
 
     const auto hans = "Hans Meister"s;
     const auto hans_address = address_t{"Maihofstrasse 49"s, 6000u, "Luzern"s};
-    const auto [it, inserted] = address_book.insert({hans, hans_address});
-    const auto [name, address] = *it;
+    const auto [iter, inserted] = address_book.insert({hans, hans_address});
+    const auto [name, address] = *iter;
 
     std::cout << "inserted = " << inserted << std::endl;
     std::cout << "name = " << name << std::endl;
