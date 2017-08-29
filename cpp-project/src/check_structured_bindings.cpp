@@ -14,15 +14,17 @@ int main() {
 
         const auto pattern = R"(\[\w+\s*,\s*\w+\]\s*=\s*address_book.insert)"s;
         if (exists_in_file(pattern, file_path) > 0) {
-            show_success(false);
             show_message_on_techio("Great", "You used structured bindings");
             if (exists_in_file(pattern, file_path) < 3) {
+                show_success(false);
                 show_message_on_techio("...but", "Did you replace all occurrences?");
+                return 0;
             }
             const auto pattern_2 = R"(\[\w+\s*,\s*\w+\]\s*:\s*address_book)"s;
             if (exists_in_file(pattern_2, file_path) > 0) {
                 show_success(true);
             } else {
+                show_success(false);
                 show_message_on_techio("...but", "how about the range based for loop?");
             }
 
@@ -31,7 +33,6 @@ int main() {
             show_message_on_techio("Oops! 🐞", "You didn't refactor the code");
             show_message_on_techio("Hint", "Did you use structured bindings where a tuple or pair is returned.");
         }
-
     } catch (const exception& e) {
         show_success(false);
         show_message_on_techio("Oops! 🐞", e.what());
