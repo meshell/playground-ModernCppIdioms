@@ -41,7 +41,7 @@ int main() {
     }
 
     const auto peter_address = address_t{"Langstrasse 49"s, 8000u, "Zürich"s};
-    result = address_book.insert({peter, peter_address});
+    auto result = address_book.insert({peter, peter_address});
 
     if (result.second) {
         std::cout << "Inserted " << result.first->first << std::endl;;
