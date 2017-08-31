@@ -16,11 +16,11 @@ int main() {
 
         const auto execution_time = duration(very_expensive_function, 2, 100);
         const auto execution_time_in_ms = std::chrono::duration_cast<std::chrono::milliseconds>(execution_time).count();
-        assert_ge(execution_time_in_ms, 200l, "Measure execution time of an expensive function");
+        assert_ge(execution_time_in_ms, 200l, "Measure execution time of an expensive function in milliseconds");
         show_message_on_techio("Great", "You correctly measured the execution time");
-        show_message_on_techio("Remark", "Did you use a steady clock");
+        show_message_on_techio("Remark", "Did you use a steady clock? E.g. steady_clock?");
         show_message_on_techio("Remark",
-                               "Can you change the code to return a differnt duration type, e.g. nanoseconds?");
+                               "Can you change the code to return a differnt duration type? E.g. nanoseconds?");
         show_success(true);
     } catch (const std::exception& e) {
         show_success(false);
