@@ -1,5 +1,5 @@
 cmake_minimum_required (VERSION 3.8)
-project (universe)
+project (modern_cpp)
 
 set(CMAKE_CXX_FLAGS "-lstdc++fs" )
 set(CMAKE_CXX_STANDARD 17)
@@ -14,13 +14,13 @@ else()
 endif()
 
 
-
-add_executable(structured_binding src/helpers/helpers.cpp src/Exercises/structured_binding.cpp)
-target_link_libraries(structured_binding stdc++fs)
+add_executable(structured_binding src/Exercises/structured_binding.cpp)
 
 add_executable(check_structured_bindings src/check_structured_bindings.cpp src/helpers/helpers.cpp)
 target_link_libraries(check_structured_bindings stdc++fs)
 
-add_executable(init_statements src/helpers/helpers.cpp src/Exercises/init_statements.cpp)
-target_link_libraries(init_statements stdc++fs)
+add_executable(init_statements src/Exercises/init_statements.cpp)
+
+add_executable(check_init_statements src/check_init_statements.cpp src/helpers/helpers.cpp)
+target_link_libraries(check_init_statements stdc++fs)
 

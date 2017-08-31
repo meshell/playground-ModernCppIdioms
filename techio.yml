@@ -6,6 +6,8 @@ plan:
     statement: markdowns/welcome.md # Set the file path to the page content
   - title: Structured Bindings
     statement: markdowns/structured_bindings.md
+  - title: Init statement for if/switch
+    statement: markdowns/init_statement.md
 
 
 # Settings for your programming projects and the associated Docker images
