@@ -8,6 +8,8 @@ plan:
     statement: markdowns/structured_bindings.md
   - title: Init statement for if/switch
     statement: markdowns/init_statement.md
+  - title: Measure Time Intervals
+    statement: markdowns/measure_time_intervals.md
 
 
 # Settings for your programming projects and the associated Docker images
