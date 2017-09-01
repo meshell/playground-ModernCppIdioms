@@ -27,3 +27,5 @@ target_link_libraries(check_init_statements stdc++fs)
 add_executable(test_measure_duration src/measure_duration_test.cpp src/Exercises/measure_duration.h src/helpers/helpers.cpp)
 target_link_libraries(test_measure_duration stdc++fs)
 
+add_executable(test_time_intervals src/test_time_intervals.cpp src/Exercises/time_intervals.h src/helpers/helpers.cpp)
+target_link_libraries(test_time_intervals stdc++fs)
