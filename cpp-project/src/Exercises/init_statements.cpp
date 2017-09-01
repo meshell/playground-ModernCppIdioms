@@ -17,8 +17,8 @@ int main() {
 
     const auto hans = "Hans Meister"s;
     const auto hans_address = address_t{"Maihofstrasse 49"s, 6000u, "Luzern"s};
-    const auto [iter, inserted] = address_book.insert({hans, hans_address});
-    const auto [name, address] = *iter;
+    const auto& [iter, inserted] = address_book.insert({hans, hans_address});
+    const auto& [name, address] = *iter;
 
     std::cout << "inserted = " << inserted << std::endl;
     std::cout << "name = " << name << std::endl;
@@ -38,7 +38,7 @@ int main() {
     }
 
     const auto peter_address = address_t{"Langstrasse 49"s, 8000u, "Zürich"s};
-    const auto [second_elem, second_insert] = address_book.insert({peter, peter_address});
+    const auto& [second_elem, second_insert] = address_book.insert({peter, peter_address});
 
     if (second_insert) {
         std::cout << "Inserted " << second_elem->first << std::endl;;
@@ -46,7 +46,7 @@ int main() {
         std::cout << "Did not insert " << second_elem->first << std::endl;;
     }
 
-    const auto [third_elem, third_insert] = address_book.insert({peter, peter_address});
+    const auto& [third_elem, third_insert] = address_book.insert({peter, peter_address});
 
     if (third_insert) {
         std::cout << "Inserted " << third_elem->first << std::endl;;

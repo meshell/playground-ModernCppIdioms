@@ -1,7 +1,8 @@
 # Init Statements for if/switch
 
 In the previous exercise you probably had the problem, that you had to rename
-some variables or had to put it in a different scope to have ___const correctness___. E.g
+some variables or had to put it in a different scope to
+have ___const correctness___. E.g
 ```
 {
   const auto it = address_book.find("Hans");
@@ -31,4 +32,4 @@ if (const auto it = address_book.find("Peter"); it != address_book.end()) {
 
 # DIY
 
-@[Refactor the code the use the new if form ]({"stubs": ["src/Exercises/init_statements.cpp"],"command": "sh /project/target/check_structured_bindings.sh"})
+@[Refactor the code and use the new if form to reduce the scope of the constants]({"stubs": ["src/Exercises/init_statements.cpp"],"command": "sh /project/target/check_structured_bindings.sh"})
