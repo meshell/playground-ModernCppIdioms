@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if make structured_binding ; then
   ./structured_binding | sed -e 's/^/TECHIO> message -c "Example output" /'
