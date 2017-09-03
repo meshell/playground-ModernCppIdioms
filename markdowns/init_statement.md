@@ -32,4 +32,4 @@ if (const auto it = address_book.find("Peter"); it != address_book.end()) {
 
 ## DIY
 
-@[Refactor the code and use the new if form to reduce the scope of the constants]({"stubs": ["src/Exercises/init_statements.cpp"],"command": "sh /project/target/check_structured_bindings.sh"})
+@[Refactor the code and use the new if form to reduce the scope of the constants]({"stubs": ["src/Exercises/init_statements.cpp"],"command": "bash /project/target/check_init_statements.sh"})

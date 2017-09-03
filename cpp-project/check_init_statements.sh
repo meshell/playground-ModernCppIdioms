@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 echo "TECHIO> redirect-streams \"Example output\""
 ./init_statements

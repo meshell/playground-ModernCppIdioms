@@ -1,8 +1,4 @@
-#!/bin/sh
-
-echo "TECHIO> redirect-streams \"Example output\""
-./test_time_intervals
-echo "TECHIO> redirect-streams --reset"
+#!/bin/bash
 
 ./test_time_intervals
 
