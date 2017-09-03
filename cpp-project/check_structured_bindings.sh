@@ -1,10 +1,8 @@
 #!/bin/bash
 
-if make structured_binding ; then
-  ./structured_binding | sed -e 's/^/TECHIO> message -c "Example output" /'
-  ./check_structured_bindings
-else
-  echo "TECHIO> message -c \"Compilation\" Compilation error"
-  echo "TECHIO> success false"
-fi
+echo "TECHIO> redirect-streams \"Example output\""
+./structured_binding
+echo "TECHIO> redirect-streams --reset
+
+./check_structured_bindings
 
