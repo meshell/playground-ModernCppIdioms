@@ -10,6 +10,8 @@ plan:
     statement: markdowns/init_statement.md
   - title: Time Intervals
     statement: markdowns/measure_time_intervals.md
+  - title: Regular Expressions
+    statement: markdowns/regex.md
 
 
 # Settings for your programming projects and the associated Docker images

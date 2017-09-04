@@ -21,6 +21,9 @@ target_link_libraries(check_structured_bindings stdc++fs)
 
 add_executable(init_statements src/Exercises/init_statements.cpp)
 
+add_executable(regex_test src/regex_test.cpp src/Exercises/regex_replace.h src/helpers/helpers.cpp)
+target_link_libraries(regex_test stdc++fs)
+
 add_executable(check_init_statements src/check_init_statements.cpp src/helpers/helpers.cpp)
 target_link_libraries(check_init_statements stdc++fs)
 
