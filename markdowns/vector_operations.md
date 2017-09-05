@@ -86,3 +86,6 @@ int main() {
 }
 ```
 ## Keep std::vector sorted
+
+
+@[Implement insert_sorted method]({"stubs": ["src/Exercises/vector_sorted_insert.cpp"],"command": "./vector_sorted_insert"})
