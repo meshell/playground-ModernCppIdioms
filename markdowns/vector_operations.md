@@ -1,8 +1,8 @@
 # Working with vectors
 
 ## Remove multiple items from a vector
-We looked already at the Erase-Remove Idiom in the [Januar 2016 Meeting](http://cpp-ug-luzern.blogspot.ch/2016/02/c-idioms.html)
-The Erase-Remove Idiom is the considered the correct way of removing multiple items from a standard library container.
+We looked already at the Erase-Remove Idiom in the [Januar 2016 Meeting](http://cpp-ug-luzern.blogspot.ch/2016/02/c-idioms.html).
+The Erase-Remove Idiom is considered the correct way of removing multiple items from a standard library container.
 
 ```C++ runnable
 #include <vector>
