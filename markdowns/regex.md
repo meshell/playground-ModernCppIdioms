@@ -37,4 +37,4 @@ int main() {
 
 ## DIY
 
-@[implement the function according the documentation]({"stubs": ["src/Exercises/regex_replace.h"],"command": "bash /project/target/check_regex_replacement.sh"})
+@[implement the function according the documentation]({"stubs": ["src/Exercises/regex_replace.h"],"command": "./regex_test"})
