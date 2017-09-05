@@ -42,8 +42,8 @@ int main() {
 }
 ```
 
-## Deleting items from an unsorted vector in O(1)
-Deleting an element from the middle of an `std::vector` with the Erase-Remove idiom takes _O(n)_, because the resulting gap must be filled by moving all the items after the gap to the left.
+## Deleting items from an unsorted vector in $`O(1)`$
+Deleting an element from the middle of an `std::vector` with the Erase-Remove idiom takes $`O(n)`$, because the resulting gap must be filled by moving all the items after the gap to the left.
 This might be expensive if the items are complex and/or very large. If preserving the order of the items is not important, the deletion can be optimized.
 
 ```C++ runnable

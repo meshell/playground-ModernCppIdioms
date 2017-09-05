@@ -14,7 +14,7 @@ template<typename T>
 void assert_equal(T found, T&& expected, std::string message) {
     if (expected != found) {
         std::ostringstream error;
-        error << message << " Expected: " << expected << ", Found: " << found << std::endl;
+        error << message << " Expected: " << expected << ", Found: " << found;
         throw std::logic_error(error.str());
     }
 }
@@ -22,7 +22,7 @@ void assert_equal(T found, T&& expected, std::string message) {
 inline void assert_true(bool cond, std::string message) {
     if (not cond) {
         std::ostringstream error;
-        error << message << " Expected to be true, but is false\n";
+        error << message << " Expected to be true, but is false";
         throw std::logic_error(error.str());
     }
 }
@@ -30,7 +30,7 @@ inline void assert_true(bool cond, std::string message) {
 inline void assert_false(bool cond, std::string message) {
     if (cond) {
         std::ostringstream error;
-        error << message << " Expected to be false, but is true\n";
+        error << message << " Expected to be false, but is true";
         throw std::logic_error(error.str());
     }
 }
@@ -39,7 +39,7 @@ template<typename T>
 void assert_le(T found, T&& expected, std::string message) {
     if (found > expected) {
         std::ostringstream error;
-        error << message << " Expected: " << found << " <= " << expected << std::endl;
+        error << message << " Expected: " << found << " <= " << expected;
         throw std::logic_error(error.str());
     }
 }
@@ -48,7 +48,7 @@ template<typename T>
 void assert_ge(T found, T&& expected, std::string message) {
     if (found < expected) {
         std::ostringstream error;
-        error << message << " Expected: " << found << " >= " << expected << std::endl;
+        error << message << " Expected: " << found << " >= " << expected;
         throw std::logic_error(error.str());
     }
 }
