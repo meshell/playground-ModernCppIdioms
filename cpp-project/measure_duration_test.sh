@@ -1,3 +1,3 @@
 #!/bin/bash
 
-./test_time_intervals
+./test_measure_duratio
