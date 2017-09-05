@@ -36,5 +36,8 @@ int main() {
 ```
 
 ## DIY
+The example above verified a string by checking for a regex match.
+However the regex library allows also to search for matches and replace certain patterns.
+Try to solve the next exercise by using the right classes and algorithms from [`<regex>`](http://en.cppreference.com/w/cpp/regex) .
 
-@[implement the function according the documentation]({"stubs": ["src/Exercises/regex_replace.h"],"command": "./regex_test"})
+@[Implement the function according the documentation]({"stubs": ["src/Exercises/regex_replace.h"],"command": "./regex_test"})
