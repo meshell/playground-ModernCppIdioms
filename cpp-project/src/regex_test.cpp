@@ -44,15 +44,17 @@ int main() {
     const auto expected_text = my_replace_words_with_one_vovel(text);
 
     if (censored_text == expected_text) {
-        show_message_on_techio("Great",
-                               "You correctly censored the text:\n\'"s + text + "\'\n to \n\'"s + censored_text +
-                               "\'"s);
+        show_message_on_techio("Great", "You correctly censored the text:\'"s);
+        show_message_on_techio("Great", text + "\'"s);
+        show_message_on_techio("Great", "to \'"s);
+        show_message_on_techio("Great", censored_text +"\'"s);
         show_success(true);
     } else {
         show_success(false);
-        show_message_on_techio("Oops!",
-                               "Your output (\""s + censored_text + "\") is not exactly what we expected (\""s +
-                               expected_text + "\")\n Try again !!!"s);
+        show_message_on_techio("Oops!", "Your output (\""s + censored_text +
+                "\") is not exactly what we expected (\""s + expected_text +
+                "\")\n"s);
+        show_message_on_techio("Oops!", "Try again !!!"s);
     }
 
     return 0;
