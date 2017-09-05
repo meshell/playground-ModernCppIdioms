@@ -19,6 +19,22 @@ void assert_equal(T found, T&& expected, std::string message) {
     }
 }
 
+inline void assert_true(bool cond, std::string message) {
+    if (not cond) {
+        std::ostringstream error;
+        error << message << " Expected to be true, but is false\n";
+        throw std::logic_error(error.str());
+    }
+}
+
+inline void assert_false(bool cond, std::string message) {
+    if (cond) {
+        std::ostringstream error;
+        error << message << " Expected to be false, but is true\n";
+        throw std::logic_error(error.str());
+    }
+}
+
 template<typename T>
 void assert_le(T found, T&& expected, std::string message) {
     if (found > expected) {

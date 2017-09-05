@@ -16,7 +16,7 @@ int main() {
         assert_equal(time_intervals::half_millisecond.count(), std::chrono::microseconds(500).count(), "Half milliseconds");
         assert_equal(time_intervals::half_microsecond.count(), std::chrono::nanoseconds(500).count(), "Half half_microsecond");
         const auto day_in_hours = std::chrono::duration_cast<std::chrono::hours>(time_intervals::day(1));
-        assert_equal(day_in_hours.count(), std::chrono::hours(24).count(), "day");
+        assert_equal(day_in_hours.count(), std::chrono::hours(24).count(), "day in hours");
         const auto week_in_hours = std::chrono::duration_cast<std::chrono::hours>(time_intervals::week(1));
         assert_equal(week_in_hours.count(), std::chrono::hours(24 * 7).count(), "week in hours");
         const auto week_in_days = std::chrono::duration_cast<time_intervals::day>(time_intervals::week(1));

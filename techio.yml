@@ -12,6 +12,8 @@ plan:
     statement: markdowns/measure_time_intervals.md
   - title: Regular Expressions
     statement: markdowns/regex.md
+  - title: std::vector operations
+    statement: markdowns/vector_operations.md
 
 
 # Settings for your programming projects and the associated Docker images

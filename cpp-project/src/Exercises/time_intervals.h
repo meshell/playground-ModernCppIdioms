@@ -3,7 +3,6 @@
 
 #include <chrono>
 
-
 namespace modern_cpp {
 namespace time_intervals {
 
@@ -31,8 +30,5 @@ static const time_intervals::year second_in_years(1);
 
 }
 }
-
-
-
 
 #endif //MODERN_CPP_TIME_INTERVALS_H
