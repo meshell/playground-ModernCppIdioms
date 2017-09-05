@@ -31,6 +31,7 @@ int main() {
     test_email("HANS.Muster@gmail.co.uk"s);
     test_email("Hans@Muster@gmail.c"s);
     test_email("HANS.Muster@gmail"s);
+    return 0;
 }
 ```
 

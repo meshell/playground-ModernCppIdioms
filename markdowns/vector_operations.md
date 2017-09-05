@@ -34,8 +34,12 @@ int main() {
     print_numbers(numbers);
     remove_multiples(numbers, 5);
     print_numbers(numbers);
+    if (numbers.size() != 4) {
+        std::cout << "\nFailure Not all items removed\n";
+        return 1;
+    }
+    return 0;
 }
-
 ```
 
 ## Deleting items from an unsorted vector in O(1)
@@ -53,7 +57,6 @@ void quick_remove_at(std::vector<T>& vec, std::size_t idx) {
         vec.at(idx) = std::move(vec.back());
         vec.pop_back();
     }
-    vec.shrink_to_fit();
 }
 
 template<typename T>
@@ -75,5 +78,11 @@ int main() {
     print_numbers(numbers);
     quick_remove_at(numbers, std::find(std::begin(numbers), std::end(numbers), 6));
     print_numbers(numbers);
+    if(std::count(std::begin(numbers), std::end(numbers), 6) != 0) {
+        std::cout << "\nFailure: Element 6 was not removed.\n";
+        return 1;
+    }
+    return 0;
 }
 ```
+## Keep std::vector sorted
