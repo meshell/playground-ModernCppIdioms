@@ -12,7 +12,6 @@ static time_interval_t duration(Func&& func, Args... args) {
 
     return {};
 };
-
 }
 
 #endif //MODERN_CPP_MEASURE_DURATION_H

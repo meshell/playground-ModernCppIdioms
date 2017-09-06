@@ -33,11 +33,11 @@ unsigned int exists_in_file(const string& pattern, const fs::path& filepath) {
 }
 
 void show_message_on_techio(string_view channel, string_view msg) {
-    cout << "TECHIO> message --channel \"" << channel << "\" \"" << msg << "\"\n";
+    cout << "TECHIO> message --channel \"" << channel << "\" \"" << msg << "\"" << std::endl;
 }
 
 void show_success(bool success) {
-    cout << "TECHIO> success " << (success ? "true" : "false") << "\n";
+    cout << "TECHIO> success " << (success ? "true" : "false") << std::endl;
 }
 
 }

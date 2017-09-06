@@ -21,6 +21,9 @@ target_link_libraries(check_structured_bindings stdc++fs)
 
 add_executable(init_statements src/Exercises/init_statements.cpp)
 
+add_executable(regex_test src/regex_test.cpp src/Exercises/regex_replace.h src/helpers/helpers.cpp)
+target_link_libraries(regex_test stdc++fs)
+
 add_executable(check_init_statements src/check_init_statements.cpp src/helpers/helpers.cpp)
 target_link_libraries(check_init_statements stdc++fs)
 
@@ -29,6 +32,9 @@ target_link_libraries(test_measure_duration stdc++fs)
 
 add_executable(test_time_intervals src/test_time_intervals.cpp src/Exercises/time_intervals.h src/helpers/helpers.cpp)
 target_link_libraries(test_time_intervals stdc++fs)
+
+add_executable(vector_sorted_insert src/Exercises/vector_sorted_insert.cpp src/helpers/helpers.cpp)
+target_link_libraries(vector_sorted_insert stdc++fs)
 
 add_executable(optional src/Exercises/optional.cpp)
 

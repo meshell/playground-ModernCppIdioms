@@ -10,6 +10,10 @@ plan:
     statement: markdowns/init_statement.md
   - title: Time Intervals
     statement: markdowns/measure_time_intervals.md
+  - title: Regular Expressions
+    statement: markdowns/regex.md
+  - title: std::vector operations
+    statement: markdowns/vector_operations.md
   - title: Optional
     statement: markdowns/optional.md
 
