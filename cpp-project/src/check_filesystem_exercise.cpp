@@ -8,9 +8,9 @@ using namespace std::string_literals;
 using namespace modern_cpp::helpers;
 
 int main() {
-    const auto parent_path = fs::current_path().parent_path();
-    const auto data_path = parent_path / "data";
-    const auto new_data_path = parent_path / "data_new";
+    const auto current_path = fs::current_path();
+    const auto data_path = current_path / "data";
+    const auto new_data_path = current_path / "data_new";
     if (fs::exists(new_data_path) && fs::is_directory(new_data_path)) {
         if (fs::exists(new_data_path / "text3.txt")) {
             if (fs::exists(data_path / "text3.txt")) {
