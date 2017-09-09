@@ -18,7 +18,7 @@ plan:
     statement: markdowns/optional.md
   - title: Variant
     statement: markdowns/variant.md
-  - title: filesystem library
+  - title: Filesystem library
     statement: markdowns/filesystem.md
 
 
