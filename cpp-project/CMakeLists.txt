@@ -50,3 +50,6 @@ target_link_libraries(check_filesystem_exercise stdc++fs)
 
 
 add_executable(use_of_any src/Exercises/use_any.cpp)
+
+add_executable(check_any src/check_use_of_any.cpp src/helpers/helpers.cpp)
+target_link_libraries(check_any stdc++fs)
