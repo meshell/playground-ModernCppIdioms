@@ -8,7 +8,7 @@ if it fails because of formating or precision issues.
 Make the tests pass by refactoring function `differentiate` to return std::optional<double> instead of double.
 Does it help to make use of `value_or()`?
 
-@[Refactor the code to use std::optional]({"stubs": ["src/Exercises/optional.h"],"command": "./test_optional -s"})
+@[Refactor the code to use std::optional]({"stubs": ["src/Exercises/optional.h"],"command": "./check_optional.sh"})
 
 ## Bonus exercise
 Replace the type for time with something better than than double.
