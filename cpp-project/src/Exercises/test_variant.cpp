@@ -23,5 +23,10 @@ TEST_CASE("Estimate velocity", "") {
   SECTION("bad motion function") {
     REQUIRE(estimated_velocity([](double){ return std::nan(""); }, 8, 0.01) == "Estimation failed because of bad motion function.");
   }
+
+  SECTION("bad time") {
+    REQUIRE(estimated_velocity(distance, -7, 0.01) == "Estimation failed because of invalid time.");
+    REQUIRE(estimated_velocity(distance, std::nan(""), 0.01) == "Estimation failed because of invalid time.");
+  }
 }
 
