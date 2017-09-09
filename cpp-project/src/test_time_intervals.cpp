@@ -9,12 +9,12 @@ using namespace modern_cpp::helpers;
 
 int main() {
     try {
-        assert_equal(time_intervals::half_day.count(), std::chrono::hours(12).count(), "Half day");
-        assert_equal(time_intervals::half_hour.count(), std::chrono::minutes(30).count(), "Half hour");
-        assert_equal(time_intervals::half_minute.count(), std::chrono::seconds(30).count(), "Half minute");
-        assert_equal(time_intervals::half_second.count(), std::chrono::milliseconds(500).count(), "Half second");
-        assert_equal(time_intervals::half_millisecond.count(), std::chrono::microseconds(500).count(), "Half milliseconds");
-        assert_equal(time_intervals::half_microsecond.count(), std::chrono::nanoseconds(500).count(), "Half half_microsecond");
+        assert_equal(time_intervals::half_day.count(), std::chrono::hours(12).count(), "Half day in hours.");
+        assert_equal(time_intervals::half_hour.count(), std::chrono::minutes(30).count(), "Half hour in minutes.");
+        assert_equal(time_intervals::half_minute.count(), std::chrono::seconds(30).count(), "Half minute in seconds.");
+        assert_equal(time_intervals::half_second.count(), std::chrono::milliseconds(500).count(), "Half second in milliseconds.");
+        assert_equal(time_intervals::half_millisecond.count(), std::chrono::microseconds(500).count(), "Half millisecond in microseconds");
+        assert_equal(time_intervals::half_microsecond.count(), std::chrono::nanoseconds(500).count(), "Half microsecond in nanoseconds");
         const auto day_in_hours = std::chrono::duration_cast<std::chrono::hours>(time_intervals::day(1));
         assert_equal(day_in_hours.count(), std::chrono::hours(24).count(), "day in hours");
         const auto week_in_hours = std::chrono::duration_cast<std::chrono::hours>(time_intervals::week(1));
