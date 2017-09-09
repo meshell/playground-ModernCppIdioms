@@ -12,6 +12,8 @@ plan:
     statement: markdowns/optional.md
   - title: Variant
     statement: markdowns/variant.md
+  - title: Any
+    statement: markdowns/any.md 
   - title: Time Intervals
     statement: markdowns/measure_time_intervals.md
   - title: Regular Expressions
