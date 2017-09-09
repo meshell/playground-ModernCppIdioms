@@ -15,8 +15,9 @@ TEST_CASE("Estimate velocity", "") {
   }
 
   SECTION("bad precision") {
-    REQUIRE(estimated_velocity(distance, 8, 0) == "Estimation failed because of bad precision.");
-    REQUIRE(estimated_velocity(distance, 8, std::nan("")) == "Estimation failed because of bad precision.");
+    REQUIRE(estimated_velocity(distance, 8, 0) == "Estimation failed because of invalid precision.");
+    REQUIRE(estimated_velocity(distance, 8, -0.1) == "Estimation failed because of invalid precision.");
+    REQUIRE(estimated_velocity(distance, 8, std::nan("")) == "Estimation failed because of invalid precision.");
   }
 
   SECTION("bad motion function") {
@@ -24,8 +25,8 @@ TEST_CASE("Estimate velocity", "") {
   }
 
   SECTION("bad time") {
-    REQUIRE(estimated_velocity(distance, -7, 0.01) == "Estimation failed because of bad motion function.");
-    REQUIRE(estimated_velocity(distance, std::nan(""), 0.01) == "Estimation failed because of bad motion function.");
+    REQUIRE(estimated_velocity(distance, -7, 0.01) == "Estimation failed because of invalid time.");
+    REQUIRE(estimated_velocity(distance, std::nan(""), 0.01) == "Estimation failed because of invalid time.");
   }
 }
 
