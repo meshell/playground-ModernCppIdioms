@@ -35,3 +35,6 @@ target_link_libraries(test_time_intervals stdc++fs)
 
 add_executable(vector_sorted_insert src/Exercises/vector_sorted_insert.cpp src/helpers/helpers.cpp)
 target_link_libraries(vector_sorted_insert stdc++fs)
+
+add_executable(filesystem src/Exercises/filesystem.cpp)
+target_link_libraries(filesystem stdc++fs)
