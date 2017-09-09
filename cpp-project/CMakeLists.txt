@@ -44,3 +44,6 @@ target_include_directories(test_variant PRIVATE src/catch)
 
 add_executable(filesystem src/Exercises/filesystem.cpp)
 target_link_libraries(filesystem stdc++fs)
+
+add_executable(check_filesystem_exercise src/check_filesystem_exercise.cpp src/helpers/helpers.cpp)
+target_link_libraries(check_filesystem_exercise stdc++fs)

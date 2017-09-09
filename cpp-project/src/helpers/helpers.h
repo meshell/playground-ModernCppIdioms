@@ -5,10 +5,11 @@
 #include <string>
 #include <sstream>
 
+namespace fs = std::experimental::filesystem;
+
 namespace modern_cpp {
 namespace helpers {
 
-namespace fs = std::experimental::filesystem;
 
 template<typename T>
 void assert_equal(T found, T&& expected, std::string message) {

@@ -1,43 +1,5 @@
 # Filesystem library
+An important addition to the C++17 standard is filesystem library. The filesystem library is based on the boost::filesystem library and enables us to work with paths, files and directories.
+The current compilers (gcc 7.2. is used for this exercise) provide an implementation of the library in the `std::experimental::filesystem` namespace and the actual header is `<experimental/filesystem>`.
 
-```C++ runnable
-#include <experimental/filesystem>
-#include <iostream>
-#include <string>
-#include <vector>
-
-
-namespace fs = std::experimental::filesystem;
-using namespace std::string_literals;
-
-std::vector<fs::path> list_regular_files_in_directory(const fs::path& dir)
-{
-    std::vector<fs::path> regular_files;
-    if (fs::exists(dir) && fs::is_directory(dir))
-    {
-        for (const auto& entry : fs::directory_iterator(dir))
-        {
-            if(fs::is_regular_file(entry.status()))
-            {
-                regular_files.emplace_back(entry.path());
-            }
-        }
-    }
-    return regular_files;
-}
-
-
-
-int main()
-{
-    const auto files = list_regular_files_in_directory("../src/Exercises/data"s);
-    for (const auto& file_path : files)
-    {
-        std::cout << file_path.filename() << std::endl;
-    }
-
-    return 0;
-}
-
-```
-@[Implement ]({"stubs": ["src/Exercises/filesystem.cpp"],"command": "./filesystem"})
+@[Implement a program that searchs in the 'data' directory of the parent directory (i.e. in "../data") for all files which contain 'copy' in its content and copy them to a new folder data_new ("../data_new").]({"stubs": ["src/Exercises/filesystem.cpp"],"command": "bash /project/target/check_filesystem.sh"})
