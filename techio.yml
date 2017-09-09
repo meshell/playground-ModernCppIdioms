@@ -8,16 +8,16 @@ plan:
     statement: markdowns/structured_bindings.md
   - title: Init statement for if/switch
     statement: markdowns/init_statement.md
+  - title: Optional
+    statement: markdowns/optional.md
+  - title: Variant
+    statement: markdowns/variant.md
   - title: Time Intervals
     statement: markdowns/measure_time_intervals.md
   - title: Regular Expressions
     statement: markdowns/regex.md
   - title: std::vector operations
     statement: markdowns/vector_operations.md
-  - title: Optional
-    statement: markdowns/optional.md
-  - title: Variant
-    statement: markdowns/variant.md
   - title: Filesystem library
     statement: markdowns/filesystem.md
 
