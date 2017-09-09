@@ -16,6 +16,8 @@ plan:
     statement: markdowns/vector_operations.md
   - title: Optional
     statement: markdowns/optional.md
+  - title: Variant
+    statement: markdowns/variant.md
 
 
 # Settings for your programming projects and the associated Docker images
