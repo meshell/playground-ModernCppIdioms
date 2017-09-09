@@ -1,21 +1,22 @@
 #include <experimental/filesystem>
-#include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
 
 
 namespace fs = std::experimental::filesystem;
 using namespace std::string_literals;
 
-std::vector<fs::path> list_regular_files_in_directory(const fs::path& dir)
-{
+/**
+ * List all regular files in a directory
+ * @param dir directory path
+ * @return vector of paths of regular files in directory
+ */
+std::vector<fs::path> list_regular_files_in_directory(const fs::path& dir) {
     std::vector<fs::path> regular_files;
-    if (fs::exists(dir) && fs::is_directory(dir))
-    {
-        for (const auto& entry : fs::directory_iterator(dir))
-        {
-            if(fs::is_regular_file(entry.status()))
-            {
+    if (fs::exists(dir) && fs::is_directory(dir)) {
+        for (const auto& entry : fs::directory_iterator(dir)) {
+            if (fs::is_regular_file(entry.status())) {
                 regular_files.emplace_back(entry.path());
             }
         }
@@ -23,15 +24,31 @@ std::vector<fs::path> list_regular_files_in_directory(const fs::path& dir)
     return regular_files;
 }
 
-
-
-int main()
-{
-    const auto files = list_regular_files_in_directory("../src/Exercises/data"s);
-    for (const auto& file_path : files)
-    {
-        std::cout << file_path.filename() << std::endl;
+/**
+ * Check if a file contains a particular string
+ * @param filepath path to the file that should be checked
+ * @param str string to search for in file
+ * @retval true if the string str was found in file filepath
+ * @retval false otherwise
+ */
+bool file_contains_string(const fs::path& filepath, const std::string& str) {
+    if (fs::exists(filepath)) {
+        std::ifstream file(filepath);
+        std::string line;
+        while (getline(file, line)) {
+            if (line.find(str) != std::string::npos) {
+                return true;
+            }
+        }
     }
+    return false;
+}
+
+
+int main() {
+
+    // TODO copy all files in "../data" which contain 'copy' in its content to
+    // a new directory called ../data_new
 
     return 0;
 }
