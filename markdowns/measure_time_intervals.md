@@ -6,4 +6,8 @@ C++11 provides a flexible date and time library as part of the standard library 
 @[Write a method which measures the execution time of a function]({"stubs": ["src/Exercises/measure_duration.h"],"command": "./test_measure_duration"})
 
 # Time intervals
-@[Fix the TODOs]({"stubs": ["src/Exercises/time_intervals.h"],"command": "./test_time_intervals"})
+## Exercise
+@[Define the durations and intervals (do the TODOs)]({"stubs": ["src/Exercises/time_intervals.h"],"command": "./test_time_intervals"})
+
+## Bonus exercise
+Define new [user defined literals](http://en.cppreference.com/w/cpp/language/user_literal) for day/days and week/weeks and use them together with the chrono literals to define the intervals in the exercise above.
