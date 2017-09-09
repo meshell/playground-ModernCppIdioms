@@ -39,3 +39,6 @@ target_link_libraries(vector_sorted_insert stdc++fs)
 add_executable(test_optional src/Exercises/test_optional.cpp)
 target_include_directories(test_optional PRIVATE src/catch)
 
+add_executable(test_variant src/Exercises/test_variant.cpp)
+target_include_directories(test_variant PRIVATE src/catch)
+
