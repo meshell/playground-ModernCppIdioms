@@ -17,39 +17,56 @@ int main() {
 
     const auto hans = "Hans Meister"s;
     const auto hans_address = address_t{"Maihofstrasse 49"s, 6000u, "Luzern"s};
-    const auto& [iter, inserted] = address_book.insert({hans, hans_address});
-    const auto& [name, address] = *iter;
 
-    std::cout << "inserted = " << inserted << std::endl;
-    std::cout << "name = " << name << std::endl;
-    std::cout << "address = " << address.street << ", "
-              << address.plz << ", "
-              << address.city << std::endl;
+    {
+        const auto& [it, inserted] = address_book.insert({hans, hans_address});
+        const auto& [name, address] = *it;
 
-    if (address_book.find(hans) != address_book.end()) {
-        std::cout << hans << " is in address book\n";
+        std::cout << "inserted = " << inserted << std::endl;
+        std::cout << "name = " << name << std::endl;
+        std::cout << "address = " << address.street << ", "
+                  << address.plz << ", "
+                  << address.city << std::endl;
     }
-
+    {
+        const auto it = address_book.find(hans);
+        if (it != address_book.end()) {
+            const auto& [name, address] = *it;
+            std::cout << name << " is in address book living in " << address.city << std::endl;
+        } else {
+            std::cout << hans << " is not in address book\n";
+        }
+    }
     const auto peter = "Peter Müller"s;
-    if (address_book.find(peter) == address_book.end()) {
-        std::cout << peter << " is not in address book\n";
+    {
+        const auto it = address_book.find(peter);
+        if (it != address_book.end()) {
+            const auto& [name, address] = *it;
+            std::cout << name << " is in address book living in " << address.city << std::endl;
+        } else {
+            std::cout << peter << " is not in address book\n";
+        }
     }
 
     const auto peter_address = address_t{"Langstrasse 49"s, 8000u, "Zürich"s};
-    const auto& [second_elem, second_insert] = address_book.insert({peter, peter_address});
-
-    if (second_insert) {
-        std::cout << "Inserted " << second_elem->first << std::endl;;
-    } else {
-        std::cout << "Did not insert " << second_elem->first << std::endl;;
+    {
+        const auto& [it, inserted] = address_book.insert({peter, peter_address});
+        const auto& [name, address] = *it;
+        if (inserted) {
+            std::cout << "Inserted " << name << std::endl;;
+        } else {
+            std::cout << "Did not insert " << name << std::endl;;
+        }
     }
 
-    const auto& [third_elem, third_insert] = address_book.insert({peter, peter_address});
-
-    if (third_insert) {
-        std::cout << "Inserted " << third_elem->first << std::endl;;
-    } else {
-        std::cout << "Did not insert " << third_elem->first << std::endl;;
+    {
+        const auto& [it, inserted] = address_book.insert({peter, peter_address});
+        const auto& [name, address] = *it;
+        if (inserted) {
+            std::cout << "Inserted " << name << std::endl;;
+        } else {
+            std::cout << "Did not insert " << name << std::endl;;
+        }
     }
 
     for(const auto& [name, address] : address_book)

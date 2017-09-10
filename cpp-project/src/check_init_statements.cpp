@@ -15,7 +15,7 @@ int main() {
         const auto pattern = R"(if\s*\([^;]+;[^;]+\)\s*\{)"s;
         if (exists_in_file(pattern, file_path) > 0) {
             show_message_on_techio("Great", "You used init statements in if");
-            if (exists_in_file(pattern, file_path) < 2) {
+            if (exists_in_file(pattern, file_path) < 4) {
                 show_success(false);
                 show_message_on_techio("...but", "Did you replace all occurrences?");
                 return 0;

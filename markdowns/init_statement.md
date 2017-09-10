@@ -5,26 +5,39 @@ In the previous exercise you probably had the problem, that you had to rename so
 {
   const auto it = address_book.find("Hans");
   if (it != address_book.end()) {
-      std::cout << "Hans is in address book\n";
+    const auto& [name, address] = *it;
+    std::cout << name << " is in address book living in " << address.city << std::endl;
+  } else {
+    std::cout << "Hans" << " is not in address book\n";
   }
 }
 {
   const auto it = address_book.find("Peter");
   if (it != address_book.end()) {
-      std::cout << "Peter is in address book\n";
+    const auto& [name, address] = *it;
+    std::cout << name << " is in address book living in " << address.city << std::endl;
+  } else {
+    std::cout << "Peter" << " is not in address book\n";
   }
-}   
+}
 ```
 
 With C++17 there are new versions of the if and switch statements: `if (init; condition)` and `switch (init; condition)`.
 
-The new if statement will make that additional scope in the example above in one line:  
+The new if statement will make that additional scope in the example above obsolete and the code shorter:  
 ```
 if (const auto it = address_book.find("Hans"); it != address_book.end()) {
-    std::cout << "Hans is in address book\n";
+  const auto& [name, address] = *it;
+  std::cout << name << " is in address book living in " << address.city << std::endl;
+} else {
+  std::cout << "Hans" << " is not in address book\n";
+}
 
 if (const auto it = address_book.find("Peter"); it != address_book.end()) {
-    std::cout << "Peter is in address book\n";
+  const auto& [name, address] = *it;
+  std::cout << name << " is in address book living in " << address.city << std::endl;
+} else {
+  std::cout << "Peter" << " is not in address book\n";
 }
 ```
 
