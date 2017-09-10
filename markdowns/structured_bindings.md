@@ -2,8 +2,7 @@
 
 [Structured bindings](http://en.cppreference.com/w/cpp/language/structured_binding)
 is a new C++ language feature shipping with C++17.
-It give us the ability to declare multiple variables initialized
-from a `tuple`, `pair` or `struct`.
+It gives us the ability to declare multiple variables initialized from a `tuple`, `pair` or `struct`.
 
 ## Example
 With C++11/14 you could use [`std::tie`](http://en.cppreference.com/w/cpp/utility/tuple/tie)
@@ -20,11 +19,11 @@ double d;
 std::tie(i, c, d) = tuple;
 ```
 
-With C++17 this because much easier:
+With C++17 this becomes much easier:
 ```
 auto tuple = std::make_tuple(1, 'a', 2.3);
 auto [ i, c, d ] = tuple;
 ```
 ## DIY
 
-@[Refactor the code the use structured bindings when ever possible]({"stubs": ["src/Exercises/structured_binding.cpp"],"command": "bash /project/target/check_structured_bindings.sh"})
+@[Refactor the code to use structured bindings when ever possible]({"stubs": ["src/Exercises/structured_binding.cpp"],"command": "bash /project/target/check_structured_bindings.sh"})

@@ -1,8 +1,6 @@
 # Init Statements for if/switch
 
-In the previous exercise you probably had the problem, that you had to rename
-some variables or had to put it in a different scope to
-have ___const correctness___. E.g
+In the previous exercise you probably had the problem, that you had to rename some variables or had to put it in a different scope to have ___const correctness___. E.g
 ```
 {
   const auto it = address_book.find("Hans");
@@ -18,7 +16,7 @@ have ___const correctness___. E.g
 }   
 ```
 
-With C++17 there are new versions of the if and switch statements for C++: `if (init; condition)` and `switch (init; condition)`.
+With C++17 there are new versions of the if and switch statements: `if (init; condition)` and `switch (init; condition)`.
 
 The new if statement will make that additional scope in the example above in one line:  
 ```

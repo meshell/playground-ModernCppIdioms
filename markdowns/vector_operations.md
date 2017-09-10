@@ -86,6 +86,6 @@ int main() {
 }
 ```
 ## Keep std::vector sorted
-
+Sometimes you want a sorted vector to be still sorted after insertion of an element. Try to implement a sorted insertion.
 
 @[Implement insert_sorted method]({"stubs": ["src/Exercises/vector_sorted_insert.cpp"],"command": "./vector_sorted_insert"})

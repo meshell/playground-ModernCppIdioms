@@ -1,5 +1,5 @@
 # Regular expressions
-C++11 provides support for [regular expressions](https://en.wikipedia.org/wiki/Regular_expression) within the standard library in the header [`regex`](http://en.cppreference.com/w/cpp/regex) through a set of class, iterators, and algorithms. Regular expressions are used to perform pattern matching within strings.
+C++11 provides support for [regular expressions](https://en.wikipedia.org/wiki/Regular_expression) within the standard library in the header [`regex`](http://en.cppreference.com/w/cpp/regex) through a set of classes, iterators, and algorithms. Regular expressions are used to perform pattern matching within strings.
 
 ## Example
 The following example checks if an input string represents a valid email address.
@@ -16,7 +16,6 @@ bool is_valid_email(const std::string& email) {
     auto rx = std::regex{pattern, std::regex_constants::icase};
     return std::regex_match(email, rx);
 };
-
 
 int main() {
     auto test_email = [](const std::string& email) {
