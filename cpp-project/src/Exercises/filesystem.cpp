@@ -47,26 +47,8 @@ bool file_contains_string(const fs::path& filepath, const std::string& str) {
 
 
 int main() {
-    const auto parent_path = fs::current_path().parent_path();
-    const auto data_path = parent_path / "data";
-    const auto files = list_regular_files_in_directory(data_path);
-    for (const auto& file_path : files) {
-        std::cout << file_path.filename() << std::endl;
-        if (file_contains_string(file_path, "copy"))
-        {
-            auto error = std::error_code{};
-            const auto new_data_path = parent_path / "data_copy";
-            auto success = fs::create_directory(new_data_path, error);
-            if (success) {
-                success = fs::copy_file(file_path, new_data_path / file_path.filename(), error);
-            }
-            if (not success) {
-                std::cout << "Failure: " << error.message() << std::endl;
-            }
-        }
-
-    }
-
+    // TODO search in the 'data' directory of the current directory for all files
+    // which contain 'copy' in its content and copy them to a new folder 'data_new'.
     return 0;
 }
 
