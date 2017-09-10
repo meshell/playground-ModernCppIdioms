@@ -7,15 +7,12 @@
 
 // Taken from "Modern C++ Programming Cookbook" by Marius Bancila
 void generate_and_print(std::function<int()> rnd_generator,
-const int iterations = 10000) {
-
+                        const int iterations = 10000) {
     auto data = std::map<int, int>{};
-
     // generate random numbers
     for (auto n = 0; n < iterations; ++n) {
         ++data[rnd_generator()];
     }
-
     // find element with the most repetitions
     const auto& [_, max_rep] = *std::max_element(
             std::begin(data),
@@ -46,10 +43,13 @@ const int iterations = 10000) {
     std::cout << "\n";
 };
 
-
 int main() {
     std::random_device rd{};
+    // TODO play around with different engines.
     auto mtgen = std::mt19937{rd()};
+
+    // TODO play around with different distributions.
     auto ud = std::uniform_int_distribution<>{1, 6};
     generate_and_print([&mtgen, &ud]{return ud(mtgen); });
+    return 0;
 }
