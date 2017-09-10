@@ -13,7 +13,7 @@ plan:
   - title: Variant
     statement: markdowns/variant.md
   - title: Any
-    statement: markdowns/any.md 
+    statement: markdowns/any.md
   - title: Time Intervals
     statement: markdowns/measure_time_intervals.md
   - title: Regular Expressions
@@ -22,6 +22,8 @@ plan:
     statement: markdowns/vector_operations.md
   - title: Filesystem library
     statement: markdowns/filesystem.md
+  - title: Pseudo-random number generation
+    statement: markdowns/random_generators.md
 
 
 # Settings for your programming projects and the associated Docker images
