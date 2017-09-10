@@ -12,10 +12,10 @@ int main() {
         const auto src_path = fs::path{current_file}.parent_path();
         const auto file_path =  src_path / fs::path{"Exercises/init_statements.cpp"};
 
-        const auto pattern = R"(\if\s*\(\[a-zA-Z=.\(\)\"]+\s*;\s*\[a-zA-Z=.\(\)\"!]+\s*\))"s;
+        const auto pattern = R"(if\s*\([^;]+;[^;]+\)\s*\{)"s;
         if (exists_in_file(pattern, file_path) > 0) {
             show_message_on_techio("Great", "You used init statements in if");
-            if (exists_in_file(pattern, file_path) < 4) {
+            if (exists_in_file(pattern, file_path) < 2) {
                 show_success(false);
                 show_message_on_techio("...but", "Did you replace all occurrences?");
                 return 0;

@@ -29,14 +29,12 @@ int main() {
               << it->second.plz << ", "
               << it->second.city << std::endl;
 
-    it = address_book.find(hans);
-    if (it != address_book.end()) {
+    if (address_book.find(hans) != address_book.end()) {
         std::cout << hans << " is in address book\n";
     }
 
     const auto peter = "Peter Müller"s;
-    it = address_book.find(peter);
-    if (it == address_book.end()) {
+    if (address_book.find(peter) == address_book.end()) {
         std::cout << peter << " is not in address book\n";
     }
 
