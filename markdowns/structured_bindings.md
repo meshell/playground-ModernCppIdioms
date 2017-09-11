@@ -8,7 +8,8 @@ It gives us the ability to declare multiple variables initialized from a `tuple`
 With C++11/14 you could use [`std::tie`](http://en.cppreference.com/w/cpp/utility/tuple/tie)
 to bind the elements of a pair or tuple to variables:
 ```
-auto tuple = std::make_tuple(1, 'a', 2.3);
+const auto tuple = std::make_tuple(1, 'a', 2.3);
+//...
 
 // first declare the variables
 int i;
@@ -21,7 +22,9 @@ std::tie(i, c, d) = tuple;
 
 With C++17 this becomes much easier:
 ```
-const auto [ i, c, d ] = std::make_tuple(1, 'a', 2.3);
+const auto tuple = std::make_tuple(1, 'a', 2.3);
+// ...
+const auto [ i, c, d ] = tuple;
 ```
 ## DIY
 
