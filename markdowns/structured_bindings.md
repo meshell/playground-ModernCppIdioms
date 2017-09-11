@@ -21,8 +21,7 @@ std::tie(i, c, d) = tuple;
 
 With C++17 this becomes much easier:
 ```
-auto tuple = std::make_tuple(1, 'a', 2.3);
-auto [ i, c, d ] = tuple;
+const auto [ i, c, d ] = std::make_tuple(1, 'a', 2.3);
 ```
 ## DIY
 
