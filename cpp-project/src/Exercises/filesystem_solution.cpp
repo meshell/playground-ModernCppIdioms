@@ -48,6 +48,7 @@ int main() {
     const auto current_path = fs::current_path();
     const auto data_path = current_path / "data";
     const auto files = list_regular_files_in_directory(data_path);
+    std::cout << "Files in ./data: \n";
     for (const auto& file_path : files) {
         std::cout << file_path.filename() << std::endl;
         if (file_contains_string(file_path, "copy")) {
@@ -61,7 +62,12 @@ int main() {
                 std::cout << "Failure: " << error.message() << std::endl;
             }
         }
-
+    }
+    const auto data_new_path = current_path / "data_new";
+    std::cout << "\n\nFiles in ./data_new: \n";
+    const auto files_in_data_new = list_regular_files_in_directory(data_new_path);
+    for (const auto& file_path : files_in_data_new) {
+        std::cout << file_path.filename() << std::endl;
     }
     return 0;
 }
