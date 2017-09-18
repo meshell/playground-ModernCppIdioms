@@ -1,7 +1,7 @@
 # Regular expressions
 ## Possible solution
 
-```C++ runnable
+```C++
 #ifndef MODERN_CPP_REGEX_REPLACE_H
 #define MODERN_CPP_REGEX_REPLACE_H
 

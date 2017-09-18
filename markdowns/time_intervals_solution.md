@@ -1,7 +1,7 @@
 # Measure Time Intervals
 ## Possible solution
 
-```C++ runnable
+```C++
 #ifndef MODERN_CPP_MEASURE_DURATION_H
 #define MODERN_CPP_MEASURE_DURATION_H
 

@@ -20,6 +20,7 @@ add_executable(check_structured_bindings src/check_structured_bindings.cpp src/h
 target_link_libraries(check_structured_bindings stdc++fs)
 
 add_executable(init_statements src/Exercises/init_statements.cpp)
+add_executable(init_statements_solution src/Exercises/init_statements_solution.cpp)
 
 add_executable(regex_test src/regex_test.cpp src/Exercises/regex_replace.h src/helpers/helpers.cpp)
 target_link_libraries(regex_test stdc++fs)
@@ -45,10 +46,14 @@ target_include_directories(test_variant PRIVATE src/catch)
 add_executable(filesystem src/Exercises/filesystem.cpp)
 target_link_libraries(filesystem stdc++fs)
 
+add_executable(filesystem_solution src/Exercises/filesystem_solution.cpp)
+target_link_libraries(filesystem_solution stdc++fs)
+
 add_executable(check_filesystem_exercise src/check_filesystem_exercise.cpp src/helpers/helpers.cpp)
 target_link_libraries(check_filesystem_exercise stdc++fs)
 
 add_executable(use_of_any src/Exercises/use_any.cpp)
+add_executable(use_of_any_solution src/Exercises/use_any_solution.cpp)
 
 add_executable(check_any src/check_use_of_any.cpp src/helpers/helpers.cpp)
 target_link_libraries(check_any stdc++fs)

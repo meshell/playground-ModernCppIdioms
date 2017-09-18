@@ -2,7 +2,7 @@
 
 ## Possible solution
 
-```C++ runnable
+```C++
 #include <functional>
 #include <sstream>
 #include <string>
