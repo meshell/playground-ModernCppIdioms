@@ -32,6 +32,8 @@ plan:
     statement: markdowns/regex_solution.md
   - title: std::vector operations
     statement: markdowns/vector_operations.md
+  - title: insert_sorted
+    statement: markdowns/sorted_vector_solution.md     
   - title: Filesystem library
     statement: markdowns/filesystem.md
   - title: Pseudo-random number generation

@@ -61,7 +61,10 @@ void quick_remove_at(std::vector<T>& vec, std::size_t idx) {
 
 template<typename T>
 void quick_remove_at(std::vector<T>& vec, typename std::vector<T>::iterator it) {
-// TODO Implement the iteration version yourself
+  if (it != std::end(vec)) {
+      *it = std::move(vec.back());
+      vec.pop_back();
+  }
 }
 
 int main() {
