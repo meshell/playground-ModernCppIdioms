@@ -8,6 +8,8 @@ plan:
     statement: markdowns/structured_bindings.md
   - title: Init statement for if/switch
     statement: markdowns/init_statement.md
+  - title: Structured Bindings & Init statement (Solution)
+    statement: markdowns/init_statement_solution.md
   - title: Optional
     statement: markdowns/optional.md
   - title: Variant
