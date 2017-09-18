@@ -16,6 +16,8 @@ plan:
     statement: markdowns/optional_solution.md
   - title: Variant
     statement: markdowns/variant.md
+  - title: Variant (Solution)
+    statement: markdowns/variant_solution.md
   - title: Any
     statement: markdowns/any.md
   - title: Time Intervals
