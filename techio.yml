@@ -12,6 +12,8 @@ plan:
     statement: markdowns/init_statement_solution.md
   - title: Optional
     statement: markdowns/optional.md
+  - title: Optional (Solution)
+    statement: markdowns/optional_solution.md
   - title: Variant
     statement: markdowns/variant.md
   - title: Any
