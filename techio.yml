@@ -20,6 +20,8 @@ plan:
     statement: markdowns/variant_solution.md
   - title: Any
     statement: markdowns/any.md
+  - title: Any (Solution)
+    statement: markdowns/any_solution.md
   - title: Time Intervals
     statement: markdowns/measure_time_intervals.md
   - title: Regular Expressions
