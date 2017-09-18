@@ -24,9 +24,13 @@ std::string replace_words_with_one_vovel(const std::string& input) {
     const auto pattern = R"((\s+(?:[^aeiou]*[aeiou][^aeiou]*){1}\s+))"s;
     const auto rx = std::regex{pattern, std::regex_constants::icase};
     auto end = std::sregex_token_iterator{};
-    for (auto it = std::sregex_token_iterator{std::begin(input), std::end(input), rx, 1}; it != end; ++it) {
+    for (auto it = std::sregex_token_iterator{std::begin(input), std::end(input), rx, 1};
+         it != end; ++it) {
         const auto word = std::string{*it};
-        const auto new_word = std::regex_replace(word, std::regex{R"([^aeiou\s])"s, std::regex_constants::icase}, "*"s);
+        const auto new_word = std::regex_replace(word,
+                                                 std::regex{R"([^aeiou\s])"s,
+                                                 std::regex_constants::icase},
+                                                 "*"s);
         words_to_replace.emplace_back(std::make_pair(word, new_word));
     }
     auto new_text = input;
