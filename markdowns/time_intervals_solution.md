@@ -26,7 +26,7 @@ static time_interval_t duration(Func&& func, Args... args) {
 # Time intervals
 ## Possible solution
 
-```C++ runnable
+```C++
 #ifndef MODERN_CPP_TIME_INTERVALS_H
 #define MODERN_CPP_TIME_INTERVALS_H
 
