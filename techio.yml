@@ -25,9 +25,11 @@ plan:
   - title: Time Intervals
     statement: markdowns/measure_time_intervals.md
   - title: Time Intervals (Solution)
-    statement: markdowns/time_intervals_solution.md    
-  - title: Regular Expressions
+    statement: markdowns/time_intervals_solution.md
+  - title: Regular Expressions (Solution)
     statement: markdowns/regex.md
+  - title: Regular Expressions
+    statement: markdowns/regex_solution.md
   - title: std::vector operations
     statement: markdowns/vector_operations.md
   - title: Filesystem library
