@@ -24,6 +24,8 @@ plan:
     statement: markdowns/any_solution.md
   - title: Time Intervals
     statement: markdowns/measure_time_intervals.md
+  - title: Time Intervals (Solution)
+    statement: markdowns/time_intervals_solution.md    
   - title: Regular Expressions
     statement: markdowns/regex.md
   - title: std::vector operations
